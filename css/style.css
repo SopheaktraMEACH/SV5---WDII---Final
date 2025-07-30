@@ -40,7 +40,8 @@ h2,
 h3,
 h4,
 .fw-semi-bold {
-    font-weight: 600 !important;
+    font-weight: 800 !important;
+    color: green;
 }
 
 h5,
@@ -48,6 +49,7 @@ h6,
 .fw-medium {
     font-weight: 500 !important;
 }
+
 
 
 /*** Button ***/
@@ -398,4 +400,11 @@ h6,
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+.chip-style {
+    color: white;
+    background-color: green;
+    padding: 2px 8px;
+    border-radius: 6px;
 }
