@@ -408,3 +408,13 @@ h6,
     padding: 2px 8px;
     border-radius: 6px;
 }
+
+.profile-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+    margin: 0 auto;
+}
