@@ -418,3 +418,10 @@ h6,
     display: block;
     margin: 0 auto;
 }
+
+.term-radio {
+    border: 1px solid green;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
