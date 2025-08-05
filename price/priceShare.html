@@ -441,33 +441,33 @@
                                 <span class="ps-2 w-50 ">Term Length :</span> $<span id="termlength">
                                     <script>
                                         const monthPrice = 1.10;
-                                        const monthResult = document.getElementById("termlength");
-                                        let month3_Box = document.getElementById("three_month");
-                                        let month6_Box = document.getElementById("six_month");
-                                        let month12_Box = document.getElementById("twelve_month");
-                                        months_12_checked();
+                                        let btnThreeMonths = document.getElementById("three_month");
+                                        let btnSixMonths = document.getElementById("six_month");
+                                        let btnTwelveMonths = document.getElementById("twelve_month");
+                                        check_twelve_months();
 
-                                        month3_Box.addEventListener("click", month3_Checked);
-                                        month6_Box.addEventListener("click", month6_Checked);
-                                        month12_Box.addEventListener("click", month12_Checked);
+                                        btnTwelveMonths.addEventListener("click", check_twelve_months);
+                                        btnSixMonths.addEventListener("click", check_six_months);
+                                        btnThreeMonths.addEventListener("click", check_three_months);
 
-                                        function month3_Checked(){
-                                            six_month.checked = false;
-                                            twelve_month.checked = false;
-                                            monthResult.innerText = (three_month.value * monthPrice).toFixed(2);
-                                        };
+                                        function check_three_months() {
+                                            btnSixMonths.checked = false;
+                                            btnTwelveMonths.checked = false;
+                                            document.getElementById("termlength").innerText = (btnThreeMonths.value*monthPrice).toFixed(2);
+                                        }
 
-                                        function month6_Checked() {
-                                            three_month.checked = false;
-                                            twelve_month.checked = false;
-                                            monthResult.innerText = (six_month.value * monthPrice).toFixed(2);
-                                        };
+                                        function check_six_months() {
+                                            btnThreeMonths.checked = false;
+                                            btnTwelveMonths.checked = false;
+                                            document.getElementById("termlength").innerText = (btnSixMonths.value*monthPrice).toFixed(2);
+                                        }
 
-                                        function month12_Checked() {
-                                            three_month.checked = false;
-                                            six_month.checked = false;
-                                            monthResult.innerText = (twelve_month.value * monthPrice).toFixed(2);
-                                        };
+                                        function check_twelve_months() {
+                                            btnThreeMonths.checked = false;
+                                            btnSixMonths.checked = false;
+                                            document.getElementById("termlength").innerText = (btnTwelveMonths.value*monthPrice).toFixed(2);
+                                        }
+
                                     </script>
                                 </span>
                             </div>
