@@ -12,7 +12,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -30,7 +32,8 @@
 <body>
     <div class="container-xxl bg-white p-0">
         <!-- Spinner -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
@@ -276,8 +279,8 @@
                                             <div class="col-lg-2 text-start"><span class="fw-semi-bold">Free</span>
                                             </div>
                                             <div class="col-lg-3 text-start"><span class="fs-3"></span></div>
-                                            <div class="col-lg-1 text-start"><img src="../img/ubuntu.svg"
-                                                    width="25"></div>
+                                            <div class="col-lg-1 text-start"><img src="../img/ubuntu.svg" width="25">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-11 term-radio ms-3 mt-2">
@@ -296,8 +299,8 @@
                                             <div class="col-lg-3 text-end"><span class="fs-6">
                                                     $13.59 per month
                                                 </span></div>
-                                            <div class="col-lg-1 text-start"><img src="../img/windows.svg"
-                                                    width="25"></div>
+                                            <div class="col-lg-1 text-start"><img src="../img/windows.svg" width="25">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-11 term-radio ms-3 mt-2">
@@ -316,8 +319,8 @@
                                             <div class="col-lg-3 text-end"><span class="fs-6">
                                                     $35.59 per month
                                                 </span></div>
-                                            <div class="col-lg-1 text-start"><img src="../img/cpanel.svg"
-                                                    width="25"></div>
+                                            <div class="col-lg-1 text-start"><img src="../img/cpanel.svg" width="25">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-11 term-radio ms-3 mt-2">
@@ -336,8 +339,8 @@
                                             <div class="col-lg-3 text-end"><span class="fs-6">
                                                     Free
                                                 </span></div>
-                                            <div class="col-lg-1 text-start"><img src="../img/docker.svg"
-                                                    width="25"></div>
+                                            <div class="col-lg-1 text-start"><img src="../img/docker.svg" width="25">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-11 term-radio ms-3 mt-2">
@@ -356,8 +359,8 @@
                                             <div class="col-lg-3 text-end"><span class="fs-6">
                                                     $32.69 per month
                                                 </span></div>
-                                            <div class="col-lg-1 text-start"><img src="../img/plesk.svg"
-                                                    width="25"></div>
+                                            <div class="col-lg-1 text-start"><img src="../img/plesk.svg" width="25">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -439,8 +442,10 @@
                             <!-- Term length -->
                             <div class="p-2 border-bottom d-flex fw-semi-bold">
                                 <span class="ps-2 w-50 ">Term Length :</span> $<span id="termlength">
+                                    <!-- Mark: termPrice -->
                                     <script>
                                         const monthPrice = 1.10;
+                                        let termPrice = 0.00;
                                         let btnThreeMonths = document.getElementById("three_month");
                                         let btnSixMonths = document.getElementById("six_month");
                                         let btnTwelveMonths = document.getElementById("twelve_month");
@@ -453,19 +458,23 @@
                                         function check_three_months() {
                                             btnSixMonths.checked = false;
                                             btnTwelveMonths.checked = false;
-                                            document.getElementById("termlength").innerText = (btnThreeMonths.value*monthPrice).toFixed(2);
+                                            termPrice = (btnThreeMonths.value * monthPrice).toFixed(2);
+                                            document.getElementById("termlength").innerText = (btnThreeMonths.value * monthPrice).toFixed(2);
                                         }
 
                                         function check_six_months() {
                                             btnThreeMonths.checked = false;
                                             btnTwelveMonths.checked = false;
-                                            document.getElementById("termlength").innerText = (btnSixMonths.value*monthPrice).toFixed(2);
+                                            termPrice = (btnSixMonths.value * monthPrice).toFixed(2);
+                                            document.getElementById("termlength").innerText = (btnSixMonths.value * monthPrice).toFixed(2);
+                                            console.log(termPrice)
                                         }
 
                                         function check_twelve_months() {
                                             btnThreeMonths.checked = false;
                                             btnSixMonths.checked = false;
-                                            document.getElementById("termlength").innerText = (btnTwelveMonths.value*monthPrice).toFixed(2);
+                                            termPrice = (btnTwelveMonths.value * monthPrice).toFixed(2);
+                                            document.getElementById("termlength").innerText = (btnTwelveMonths.value * monthPrice).toFixed(2);
                                         }
 
                                     </script>
@@ -473,7 +482,8 @@
                             </div>
 
                             <div class="p-2 border-bottom d-flex fw-semi-bold">
-                                <span class="ps-2 w-50 ">Region :</span> $<span id="region">
+                                <span class="ps-2 w-50 ">Region :</span> $<span id="region">`
+                                    <!-- Mark: regionPrice -->
                                     <script>
                                         let european_union = document.getElementById("european_unionchecked");
                                         let asia_singapore = document.getElementById("asia_singaporechecked");
@@ -481,6 +491,8 @@
                                         let asia_japan = document.getElementById("asia_japanchecked");
                                         let asia_india = document.getElementById("asia_indiachecked");
                                         let australia_sydney = document.getElementById("australia_sydneychecked");
+                                        let regionPrice = 0.0;
+
                                         check_european_union();
 
                                         function check_european_union() {
@@ -490,6 +502,7 @@
                                                 asia_japan.checked = false;
                                                 asia_india.checked = false;
                                                 australia_sydney.checked = false;
+                                                regionPrice = european_union.value;
                                                 document.getElementById("region").innerText = european_union.value;
                                             } else {
                                                 document.getElementById("region").innerText = "0.00";
@@ -506,6 +519,7 @@
                                                 asia_india.checked = false;
                                                 australia_sydney.checked = false;
                                                 document.getElementById("region").innerText = asia_singapore.value;
+                                                regionPrice = asia_singapore.value;
                                             } else {
                                                 document.getElementById("region").innerText = "0.00";
                                             }
@@ -519,6 +533,7 @@
                                                 asia_japan.checked = false;
                                                 asia_india.checked = false;
                                                 australia_sydney.checked = false;
+                                                regionPrice = asia_cambodia.value;
                                                 document.getElementById("region").innerText = asia_cambodia.value;
                                             } else {
                                                 document.getElementById("region").innerText = "0.00";
@@ -533,6 +548,8 @@
                                                 asia_cambodia.checked = false;
                                                 asia_india.checked = false;
                                                 australia_sydney.checked = false;
+                                                regionPrice = asia_japan.value;
+
                                                 document.getElementById("region").innerText = asia_japan.value;
                                             } else {
                                                 document.getElementById("region").innerText = "0.00";
@@ -548,6 +565,7 @@
                                                 asia_cambodia.checked = false;
                                                 asia_japan.checked = false;
                                                 australia_sydney.checked = false;
+                                                regionPrice = asia_india.value;
                                                 document.getElementById("region").innerText = asia_india.value;
                                             } else {
                                                 document.getElementById("region").innerText = "0.00";
@@ -563,6 +581,7 @@
                                                 asia_cambodia.checked = false;
                                                 asia_japan.checked = false;
                                                 asia_india.checked = false;
+                                                regionPrice = australia_sydney.value;
                                                 document.getElementById("region").innerText = australia_sydney.value;
                                             } else {
                                                 document.getElementById("region").innerText = "0.00";
@@ -575,18 +594,21 @@
                             </div>
                             <div class="p-2 border-bottom d-flex fw-semi-bold">
                                 <span class="ps-2 w-50 ">Storage :</span>
-                                $<span id="storage">
+                                    $
+                                <span id="storage">
+                                    <!-- Mark: storagePrice -->
                                     <script>
-
                                         let ssd = document.getElementById("ssdchecked");
                                         let nvme = document.getElementById("nvmechecked");
                                         let ssd600 = document.getElementById("ssd600checked");
+                                        let storagePrice = 0.00
                                         check_ssd();
 
                                         function check_ssd() {
                                             if (ssd.checked) {
                                                 nvme.checked = false;
                                                 ssd600.checked = false;
+                                                storagePrice = ssd.value;
                                                 document.getElementById("storage").innerText = ssd.value;
                                             } else {
                                                 document.getElementById("storage").innerText = "0.00";
@@ -599,6 +621,7 @@
                                             if (nvme.checked) {
                                                 ssd.checked = false;
                                                 ssd600.checked = false;
+                                                storagePrice = nvme.value;
                                                 document.getElementById("storage").innerText = nvme.value;
                                             } else {
                                                 document.getElementById("storage").innerText = "0.00";
@@ -611,6 +634,7 @@
                                             if (ssd600.checked) {
                                                 ssd.checked = false;
                                                 nvme.checked = false;
+                                                storagePrice = ssd600.value;
                                                 document.getElementById("storage").innerText = ssd600.value;
                                             } else {
                                                 document.getElementById("storage").innerText = "0.00";
@@ -622,146 +646,153 @@
                                 </span>
                             </div>
                             <div class="p-2 border-bottom d-flex fw-semi-bold">
-                                <span class="ps-2 w-50 ">Image :</span> $
+                                <span class="ps-2 w-50 ">Image :</span>
+                                    $
                                 <span id="image">
-                                    <script>
-                                        let ubuntu = document.getElementById("ubuntuchecked");
-                                        let windows = document.getElementById("windows-server-2022checked");
-                                        let cpanel = document.getElementById("cpanelchecked");
-                                        let docker = document.getElementById("dockerchecked");
-                                        let plesk = document.getElementById("pleskchecked");
-                                        check_ubuntu();
+                                <script>
+                                    let ubuntu = document.getElementById("ubuntuchecked");
+                                    let windows = document.getElementById("windows-server-2022checked");
+                                    let cpanel = document.getElementById("cpanelchecked");
+                                    let docker = document.getElementById("dockerchecked");
+                                    let plesk = document.getElementById("pleskchecked");
+                                    let imagePrice = 0.00;
+                                    check_ubuntu();
 
-                                        function check_ubuntu() {
-                                            if (ubuntu.checked) {
-                                                windows.checked = false;
-                                                cpanel.checked = false;
-                                                docker.checked = false;
-                                                plesk.checked = false;
-                                                document.getElementById("image").innerText = ubuntu.value;
-                                            } else {
-                                                document.getElementById("image").innerText = "0.00";
-                                            }
+                                    function check_ubuntu() {
+                                        if (ubuntu.checked) {
+                                            windows.checked = false;
+                                            cpanel.checked = false;
+                                            docker.checked = false;
+                                            plesk.checked = false;
+                                            imagePrice = ubuntu.value;
+                                            document.getElementById("image").innerText = ubuntu.value;
+                                        } else {
+                                            document.getElementById("image").innerText = "0.00";
                                         }
-                                        ubuntu.addEventListener("click", check_ubuntu);
+                                    }
+                                    ubuntu.addEventListener("click", check_ubuntu);
 
-                                        function check_window() {
-                                            if (windows.checked) {
-                                                ubuntu.checked = false;
-                                                cpanel.checked = false;
-                                                docker.checked = false;
-                                                plesk.checked = false;
-                                                document.getElementById("image").innerText = windows.value;
-                                            } else {
-                                                document.getElementById("image").innerText = "0.00";
-                                            }
-                                        }
-                                        windows.addEventListener("click", check_window);
+                                    function check_window() {
+                                        if (windows.checked) {
+                                            ubuntu.checked = false;
+                                            cpanel.checked = false;
+                                            docker.checked = false;
+                                            plesk.checked = false;
+                                            imagePrice = windows.value;
 
-                                        function check_cpanel() {
-                                            if (cpanel.checked) {
-                                                ubuntu.checked = false;
-                                                windows.checked = false;
-                                                docker.checked = false;
-                                                plesk.checked = false;
-                                                document.getElementById("image").innerText = cpanel.value;
-                                            } else {
-                                                document.getElementById("image").innerText = "0.00";
-                                            }
+                                            document.getElementById("image").innerText = windows.value;
+                                        } else {
+                                            document.getElementById("image").innerText = "0.00";
                                         }
-                                        cpanel.addEventListener("click", check_cpanel);
+                                    }
+                                    windows.addEventListener("click", check_window);
 
-                                        function check_docker() {
-                                            if (docker.checked) {
-                                                ubuntu.checked = false;
-                                                windows.checked = false;
-                                                cpanel.checked = false;
-                                                plesk.checked = false;
-                                                document.getElementById("image").innerText = docker.value;
-                                            } else {
-                                                document.getElementById("image").innerText = "0.00";
-                                            }
-                                        }
-                                        docker.addEventListener("click", check_docker);
+                                    function check_cpanel() {
+                                        if (cpanel.checked) {
+                                            ubuntu.checked = false;
+                                            windows.checked = false;
+                                            docker.checked = false;
+                                            plesk.checked = false;
+                                            imagePrice = cpanel.value;
 
-                                        function check_plesk() {
-                                            if (plesk.checked) {
-                                                ubuntu.checked = false;
-                                                windows.checked = false;
-                                                cpanel.checked = false;
-                                                docker.checked = false;
-                                                document.getElementById("image").innerText = plesk.value;
-                                            } else {
-                                                document.getElementById("image").innerText = "0.00";
-                                            }
+                                            document.getElementById("image").innerText = cpanel.value;
+                                        } else {
+                                            document.getElementById("image").innerText = "0.00";
                                         }
-                                        plesk.addEventListener("click", check_plesk);
-                                    </script>
+                                    }
+                                    cpanel.addEventListener("click", check_cpanel);
+
+                                    function check_docker() {
+                                        if (docker.checked) {
+                                            ubuntu.checked = false;
+                                            windows.checked = false;
+                                            cpanel.checked = false;
+                                            plesk.checked = false;
+                                            imagePrice = docker.value;
+
+                                            document.getElementById("image").innerText = docker.value;
+                                        } else {
+                                            document.getElementById("image").innerText = "0.00";
+                                        }
+                                    }
+                                    docker.addEventListener("click", check_docker);
+
+                                    function check_plesk() {
+                                        if (plesk.checked) {
+                                            ubuntu.checked = false;
+                                            windows.checked = false;
+                                            cpanel.checked = false;
+                                            docker.checked = false;
+                                            imagePrice = plesk.value;
+
+                                            document.getElementById("image").innerText = plesk.value;
+                                        } else {
+                                            document.getElementById("image").innerText = "0.00";
+                                        }
+                                    }
+                                    plesk.addEventListener("click", check_plesk);
+                                </script>
                                 </span>
                             </div>
 
                             <div class="p-2 border-bottom d-flex fw-semi-bold">
                                 <span class="ps-2 w-50 ">Networking :</span> $
                                 <span id="network">
+                                    <!-- Mark: networkingPrice -->
                                     <script>
                                         let ipaddress = document.getElementById("ipaddresschecked");
                                         let ipssl = document.getElementById("ipsslchecked");
                                         let ipsslwildcard = document.getElementById("ipsslwildcardchecked");
+                                        let networkingPrice = 0.00;
                                         check_ipaddress();
 
-                                        function check_ipaddress() {
-                                            if (ipaddress.checked) {
-                                                ipssl.checked = false;
-                                                ipsslwildcard.checked = false;
-                                                document.getElementById("network").innerText = ipaddress.value;
-                                            } else {
-                                                document.getElementById("network").innerText = "0.00";
-                                            }
-                                        }
                                         ipaddress.addEventListener("click", check_ipaddress);
+                                        ipssl.addEventListener("click", check_ipssl);
+                                        ipsslwildcard.addEventListener("click", check_ipsslwildcard);
+
+                                        function check_ipaddress() {
+                                            ipssl.checked = false;
+                                            ipsslwildcard.checked = false;
+                                            networkingPrice = ipaddress.value;
+                                            document.getElementById("network").innerText = ipaddress.value;
+                                        }
 
                                         function check_ipssl() {
-                                            if (ipssl.checked) {
-                                                ipaddress.checked = false;
-                                                ipsslwildcard.checked = false;
-                                                document.getElementById("network").innerText = ipssl.value;
-                                            } else {
-                                                document.getElementById("network").innerText = "0.00";
-                                            }
+                                            ipaddress.checked = false;
+                                            ipsslwildcard.checked = false;
+                                            networkingPrice = ipssl.value;
+                                            document.getElementById("network").innerText = ipssl.value;
                                         }
-                                        ipssl.addEventListener("click", check_ipssl);
 
                                         function check_ipsslwildcard() {
-                                            if (ipsslwildcard.checked) {
-                                                ipaddress.checked = false;
-                                                ipssl.checked = false;
-                                                document.getElementById("network").innerText = ipsslwildcard.value;
-                                            } else {
-                                                document.getElementById("network").innerText = "0.00";
-                                            }
+                                            ipaddress.checked = false;
+                                            ipssl.checked = false;
+                                            networkingPrice = ipsslwildcard.value;
+                                            document.getElementById("network").innerText = ipsslwildcard.value;
                                         }
-                                        ipsslwildcard.addEventListener("click", check_ipsslwildcard);
                                     </script>
                                 </span>
                             </div>
                             <!-- js -->
-                            <div class="p-2 border-bottom d-flex fw-semi-bold"><span class="ps-2 w-50 ">Setup Fee
-                                    :</span> $<span id="setup">15.00</span></div>
                             <div class="p-2 border-bottom d-flex fw-semi-bold">
-                                <button type="button" class="btn btn-primary text-white btn-sm w-100 fw-semi-bold "
-                                    id="calculatePrice">
+                                <span class="ps-2 w-50 ">Setup Fee :</span>
+                                    $
+                                <span id="setup">15.00</span>
+                            </div>
+                            <div class="p-2 border-bottom d-flex fw-semi-bold">
+                                <button type="button" class="btn btn-primary text-white btn-sm w-100 fw-semi-bold" id="calculateButton">
                                     <i class="bi bi-calculator-fill"></i> Calculate Price
                                 </button>
                             </div>
                             <div class="text-center border-bottom p-4">
                                 <p class="text-primary mb-1">Latest Offer - <strong id="save"></strong></p>
-                                <h1 class="mb-3"><small class="align-top"
-                                        style="font-size: 22px; line-height: 45px;">$</small><span
-                                        id="calculateprice">0.00</span><small class="align-bottom"
-                                        style="font-size: 16px; line-height: 40px;" id="duration">/ year</small></h1>
+                                <h1 class="mb-3">
+                                    <small class="align-top style=" font-size: 22px; line-height: 45px;">$</small>
+                                    <span id="EndResult">0.00</span>
+                                    <small class="align-bottom" style="font-size: 16px; line-height: 40px;" id="duration">/ year</small>
+                                </h1>
                                 <div class="btn btn-secondary px-4 py-2 b-border-red" id="submit">Continue</div>
                                 <p class="text-danger" id="danger"></p>
-                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -770,6 +801,24 @@
         </div>
 
         <!-- Footer -->
+        <!-- Mark:  -->
+        <script>
+            let calculateButton = document.getElementById("calculateButton");
+            let finalResult = document.getElementById("EndResult");
+            calculateButton.addEventListener("click", calculate);
+
+            function calculate() {
+                let totalPrice = 0.00;
+
+                // Calculate total price
+                totalPrice += parseFloat(termPrice);
+                totalPrice += parseFloat(regionPrice);
+                totalPrice += parseFloat(storagePrice);
+                totalPrice += parseFloat(imagePrice);
+                totalPrice += parseFloat(networkingPrice);
+                finalResult.innerText = totalPrice.toFixed(2);
+            }
+        </script>
 
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -784,4 +833,5 @@
         <script src="/js/main.js"></script>
     </div>
 </body>
+
 </html>
