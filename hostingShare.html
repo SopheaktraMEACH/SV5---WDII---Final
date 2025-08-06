@@ -42,13 +42,11 @@
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
-        <!-- Spinner End -->
-
 
         <!-- Navbar Short Section -->
         <div class="container-xxl position-relative p-0"><!--!-->
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
+                <a href="" class="navbar-brand p-0">
                     <h1 class="m-0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor"
                             class="bi bi-rocket-takeoff-fill" viewBox="0 0 16 16">
@@ -65,7 +63,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="index.html" class="nav-item nav-link ">Home</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
                             <div class="dropdown-menu m-0">
@@ -76,20 +74,19 @@
                                 <a href="contact.html" class="dropdown-item">Contact</a>
                             </div>
                         </div>
-                        <a href="hostingShare.html" class="nav-item nav-link">Shared</a>
-                        <a href="hostingShare.html" class="nav-item nav-link">Cloud VPS</a>
-                        <a href="hostingShare.html" class="nav-item nav-link">Cloud VDS</a>
-                        <a href="hostingShare.html" class="nav-item nav-link">Dedicated Server</a>
-
+                        <a href="hostingShare.html" class="nav-item nav-link active">Shared</a>
+                        <a href="cloudVPS.html" class="nav-item nav-link">Cloud VPS</a>
+                        <a href="cloudVDS.html" class="nav-item nav-link">Cloud VDS</a>
+                        <a href="dedicated.html" class="nav-item nav-link">Dedicated Server</a>
                     </div>
+
                     <butaton type="button" class="btn text-secondary ms-3" data-bs-toggle="modal"
                         data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
                     <a href="./login.html" class="btn btn-secondary py-2 px-4 ms-3">Register</a>
                 </div>
             </nav>
 
-
-            <!--!-->
+            <!-- Search Active -->
             <div class="modal fade" id="searchModal" tabindex="-1" b-rswtbb66nh="">
                 <div class="modal-dialog modal-fullscreen" b-rswtbb66nh="">
                     <div class="modal-content" style="background: rgba(29, 40, 51, 0.8);" b-rswtbb66nh="">
@@ -106,20 +103,20 @@
                         </div>
                     </div>
                 </div>
-            </div><!--!-->
-            <!--!-->
-            <div class="container-xxl pt-5 bg-primary mb-5">
+            </div>
+
+            <div class="container-xxl pt-5 bg-primary mb-5 ">
                 <div class="container-fluid">
                     <div class="row g-5 pt-5">
                         <div class="col-6 text-center text-lg-start">
-                            <h3 class="text-white">About US</h3>
+                            <h3 class="text-white mx-4">Hosting Shared</h3>
                         </div>
                         <div class="col-6 text-center text-lg-start">
                             <nav aria-label="breadcrumb">
                                 <ol
-                                    class="breadcrumb justify-content-center justify-content-lg-end animated slideInRight">
-                                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                                    <li class="breadcrumb-item text-white active" aria-current="page">About
+                                    class="breadcrumb justify-content-center justify-content-lg-end animated slideInRight mx-4">
+                                    <li class="breadcrumb-item"><a class="text-white" href="./index.html">Home</a></li>
+                                    <li class="breadcrumb-item text-white active" aria-current="page">Hosting
                                     </li>
                                 </ol>
                             </nav>
@@ -129,98 +126,172 @@
             </div>
         </div>
 
-        <!-- About US -->
+        <!-- Full Screen Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content" style="background: rgba(29, 40, 51, 0.8);">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center justify-content-center">
+                        <div class="input-group" style="max-width: 600px;">
+                            <input type="text" class="form-control bg-transparent border-light p-3"
+                                placeholder="Type search keyword">
+                            <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing Start -->
         <div class="container-xxl py-5">
             <div class="container px-lg-5">
                 <div class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp"
-                    data-wow-delay="0.1s" style="max-width: 600px; visibility: visible; animation-delay: 0.1s;">
-                    <h1 class="mb-3"><i class="bi bi-pc-display me-3"></i>About US</h1>
+                    data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Our Hosting Plans</h1>
+                    <p class="mb-1">Looking for the perfect hosting solution? We've got you covered!</p>
                 </div>
                 <div class="row gy-5 gx-4">
-                    <div class="col-lg-3"><img src="./img/working.svg" width="100%"><br><br>
-                        <img src="./img/Wireframe.svg" width="100%">
+                    <!-- Content Price -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="position-relative shadow rounded border-top border-5 border-primary">
+                            <div class="d-flex align-items-center justify-content-center position-absolute top-0 start-50 translate-middle bg-primary rounded-circle"
+                                style="width: 45px; height: 45px; margin-top: -3px;">
+                                <i class="fa fa-share-alt text-white"></i>
+                            </div>
+                            <div class="text-center border-bottom p-4 pt-5">
+                                <h4 class="fw-bold">Share Hosting</h4>
+                                <p class="mb-0">"Simple & Affordable Hosting for Beginners"</p>
+                            </div>
+                            <div class="text-center border-bottom p-4">
+                                <p class="text-primary mb-1">
+                                    <span class="text-decoration-line-through">$ 1.50</span><strong> - Save 30%</strong>
+                                </p>
+                                <h1 class="mb-3">
+                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>$
+                                    1.10<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                        Month</small>
+                                </h1>
+                                <a class="btn btn-primary px-4 py-2" href="./price/priceShareOne.html">Buy Now</a>
+                            </div>
+                            <div class="p-4">
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Disk Space: 1
+                                    GB</p>
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Ram: 1GB</p>
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>vCPU: 1 Core
+                                </p>
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Bandwidth: 1
+                                    GB / 1 Gbps</p>
+                                <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>Free SSL Available</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-9">
-                        <p class="mb-4 fs-5"><b>At Sabay HOST</b>, we are more than just Cambodia’s leading cloud
-                            computing
-                            and web hosting provider—we are a trusted partner in your digital journey.
-                            Our commitment goes beyond offering reliable services;
-                            we prioritize customer satisfaction, innovation, and seamless technological solutions
-                            to empower businesses of all sizes.
-                        </p>
-                        <p class="mb-4 fs-5">
-                            Every member of the <b>Sabay Team </b> is dedicated to delivering top-tier hosting and
-                            infrastructure solutions, ensuring that our clients can focus on growth, creativity,
-                            and success without worrying about technical complexities.
-                            We don’t just provide services—we build lasting partnerships,
-                            safeguarding your data and supporting your business at every stage.
-                        </p>
-                        <p class="mb-4 fs-5">
-                            With world-class support, cutting-edge technology,
-                            and competitive pricing, we make enterprise-level cloud computing
-                            and hosting accessible to individuals and businesses alike.
-                            Experience the <b>Sabay HOST</b> difference—where innovation meets reliability, and your
-                            success is our mission.
-                        </p>
+                    <!-- Content Price -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="position-relative shadow rounded border-top border-5 border-primary">
+                            <div class="d-flex align-items-center justify-content-center position-absolute top-0 start-50 translate-middle bg-primary rounded-circle"
+                                style="width: 45px; height: 45px; margin-top: -3px;">
+                                <i class="fa fa-share-alt text-white"></i>
+                            </div>
+                            <div class="text-center border-bottom p-4 pt-5">
+                                <h4 class="fw-bold">Share Hosting</h4>
+                                <p class="mb-0">"Simple & Affordable Hosting for Beginners"</p>
+                            </div>
+                            <div class="text-center border-bottom p-4">
+                                <p class="text-primary mb-1">
+                                    <span class="text-decoration-line-through">$ 3.50</span><strong> - Save 30%</strong>
+                                </p>
+                                <h1 class="mb-3">
+                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>$
+                                    2.91<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                        Month</small>
+                                </h1>
+                                <a class="btn btn-primary px-4 py-2" href="./price/priceShareTwo.html">Buy Now</a>
+                            </div>
+                            <div class="p-4">
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Disk Space:
+                                    20
+                                    GB</p>
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Ram: 2GB</p>
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>vCPU: 1 Core
+                                </p>
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Bandwidth: 1
+                                    TB / 1 Gbps</p>
+                                <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>Free SSL Available</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="row gy-5 gx-4">
-                    <div class="col-lg-7">
-                        <h4>Mission</h4>
-                        <p class="mb-4 fs-5"><b>At Sabay HOST</b>, our mission is to provide world-class cloud computing
-                            and web hosting solutions that empower businesses
-                            to thrive in the digital era. We are dedicated to delivering reliable,
-                            secure, and scalable services that help our clients achieve their goals
-                            with ease and confidence. Through innovation, excellent customer support,
-                            and a focus on technological excellence, we aim to build lasting relationships
-                            with our customers while contributing to their success.
-                        </p>
-                        <h4>Vision</h4>
-                        <p class="mb-4 fs-5"><b>Our vision </b>is to be the leading cloud computing and hosting provider
-                            in Cambodia,
-                            recognized for driving digital transformation and fostering business growth.
-                            We strive to create a future where businesses, regardless of size,
-                            can harness the power of the cloud to innovate, scale, and achieve their full potential. We
-                            envision a connected world where our customers experience seamless, efficient, and secure
-                            hosting solutions that are essential to their ongoing success.
-                        </p>
-                        <h4>Values</h4>
-                        <p class="mb-4 fs-5"></p>
-                        <ul>
-                            <li><b class="chip-style">Customer-Centricity:</b> Our customers are at the heart of
-                                everything we do.
-                                We listen, understand, and continuously adapt our services to meet their unique needs
-                                and challenges.</li>
-                            <li><b class="chip-style">Innovation:</b> We embrace cutting-edge technologies and
-                                constantly
-                                seek creative solutions to ensure our services remain ahead of the curve
-                                and drive the success of our customers.</li>
-                            <li><b class="chip-style">Reliability:</b> We are committed to providing stable, secure, and
-                                dependable
-                                services
-                                that our customers can count on at all times.
-                            </li>
-                            <li><b class="chip-style">Integrity:</b> We operate with transparency, honesty, and ethical
-                                standards,
-                                building trust with our customers and partners.
-                            </li>
-                            <li><b class="chip-style"> Collaboration:</b> We believe in working closely with our
-                                clients, understanding
-                                their goals,
-                                and forming long-term partnerships for mutual growth and success.
-                            </li>
-                            <li><b class="chip-style">Excellence:</b> We strive for the highest quality in everything we
-                                do, from technical
-                                solutions to customer service, ensuring
-                                that every client has the best possible experience with us.
-                            </li>
-                        </ul>
-                        <p></p>
+                    <!-- Content Price -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="position-relative shadow rounded border-top border-5 border-primary">
+                            <div class="d-flex align-items-center justify-content-center position-absolute top-0 start-50 translate-middle bg-primary rounded-circle"
+                                style="width: 45px; height: 45px; margin-top: -3px;">
+                                <i class="fa fa-share-alt text-white"></i>
+                            </div>
+                            <div class="text-center border-bottom p-4 pt-5">
+                                <h4 class="fw-bold">Share Hosting</h4>
+                                <p class="mb-0">"Simple & Affordable Hosting for Beginners"</p>
+                            </div>
+                            <div class="text-center border-bottom p-4">
+                                <p class="text-primary mb-1">
+                                    <span class="text-decoration-line-through">$ 4.50</span><strong> - Save 30%</strong>
+                                </p>
+                                <h1 class="mb-3">
+                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>$
+                                    3.99<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                        Month</small>
+                                </h1>
+                                <a class="btn btn-primary px-4 py-2" href="./price/priceShareOne.html">Buy Now</a>
+                            </div>
+                            <div class="p-4">
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Disk Space:
+                                    40 GB</p>
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Ram: 3GB</p>
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>vCPU: 1 Core
+                                </p>
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Bandwidth: 5
+                                    TB / 1 Gbps</p>
+                                <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>Free SSL Available</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-5">
-                        <p><img src="./img/design.svg" width="100%"></p>
-                        <p><img src="./img/media.svg" width="100%"></p>
+                    <!-- Content Price -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="position-relative shadow rounded border-top border-5 border-primary">
+                            <div class="d-flex align-items-center justify-content-center position-absolute top-0 start-50 translate-middle bg-primary rounded-circle"
+                                style="width: 45px; height: 45px; margin-top: -3px;">
+                                <i class="fa fa-share-alt text-white"></i>
+                            </div>
+                            <div class="text-center border-bottom p-4 pt-5">
+                                <h4 class="fw-bold">Share Hosting</h4>
+                                <p class="mb-0">"Simple & Affordable Hosting for Beginners"</p>
+                            </div>
+                            <div class="text-center border-bottom p-4">
+                                <p class="text-primary mb-1">
+                                    <span class="text-decoration-line-through">$ 6.50</span><strong> - Save 30%</strong>
+                                </p>
+                                <h1 class="mb-3">
+                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>$
+                                    5.59<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                        Month</small>
+                                </h1>
+                                <a class="btn btn-primary px-4 py-2" href="./price/priceShareOne.html">Buy Now</a>
+                            </div>
+                            <div class="p-4">
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Disk Space:
+                                    75 GB</p>
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Ram: 4 GB</p>
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>vCPU: 1 Core
+                                </p>
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Bandwidth: 10
+                                    TB / 1 Gbps</p>
+                                <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>Free SSL Available</p>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -301,7 +372,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
