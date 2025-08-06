@@ -102,8 +102,8 @@
                                             <div class="col-lg-4 text-start">
                                                 <div class="form-check">
                                                     <input class="form-check-input" checked type="checkbox"
-                                                        id="european_unionchecked" value="0.00">
-                                                    <label class="form-check-label" for="european_unionchecked">
+                                                        id="european_region" value="0.00">
+                                                    <label class="form-check-label" for="european_region">
                                                         European Union
                                                     </label>
                                                 </div>
@@ -118,8 +118,8 @@
                                             <div class="col-lg-4 text-start">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox"
-                                                        id="asia_singaporechecked" value="33.60">
-                                                    <label class="form-check-label" for="asia_singaporechecked">
+                                                        id="singapore_region" value="33.60">
+                                                    <label class="form-check-label" for="singapore_region">
                                                         Asia(Singapore)
                                                     </label>
                                                 </div>
@@ -136,8 +136,8 @@
                                             <div class="col-lg-4 text-start">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox"
-                                                        id="asia_cambodiachecked" value="57.60">
-                                                    <label class="form-check-label" for="asia_cambodiachecked">
+                                                        id="cambodia_region" value="57.60">
+                                                    <label class="form-check-label" for="cambodia_region">
                                                         Asia(Cambodia)
                                                     </label>
                                                 </div>
@@ -154,8 +154,8 @@
                                             <div class="col-lg-4 text-start">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox"
-                                                        id="asia_japanchecked" value="21.60">
-                                                    <label class="form-check-label" for="asia_japanchecked">
+                                                        id="japan_region" value="21.60">
+                                                    <label class="form-check-label" for="japan_region">
                                                         Asia(Japan)
                                                     </label>
                                                 </div>
@@ -172,8 +172,8 @@
                                             <div class="col-lg-4 text-start">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox"
-                                                        id="asia_indiachecked" value="17.52">
-                                                    <label class="form-check-label" for="asia_indiachecked">
+                                                        id="checkIndia" value="17.52">
+                                                    <label class="form-check-label" for="checkIndia">
                                                         Asia(India)
                                                     </label>
                                                 </div>
@@ -190,8 +190,8 @@
                                             <div class="col-lg-4 text-start">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox"
-                                                        id="australia_sydneychecked" value="15.48">
-                                                    <label class="form-check-label" for="australia_sydneychecked">
+                                                        id="australia_region" value="15.48">
+                                                    <label class="form-check-label" for="australia_region">
                                                         Australia(Sydney)
                                                     </label>
                                                 </div>
@@ -459,22 +459,21 @@
                                             btnSixMonths.checked = false;
                                             btnTwelveMonths.checked = false;
                                             termPrice = (btnThreeMonths.value * monthPrice).toFixed(2);
-                                            document.getElementById("termlength").innerText = (btnThreeMonths.value * monthPrice).toFixed(2);
+                                            document.getElementById("termlength").innerText = termPrice;
                                         }
 
                                         function check_six_months() {
                                             btnThreeMonths.checked = false;
                                             btnTwelveMonths.checked = false;
                                             termPrice = (btnSixMonths.value * monthPrice).toFixed(2);
-                                            document.getElementById("termlength").innerText = (btnSixMonths.value * monthPrice).toFixed(2);
-                                            console.log(termPrice)
+                                            document.getElementById("termlength").innerText = termPrice;
                                         }
 
                                         function check_twelve_months() {
                                             btnThreeMonths.checked = false;
                                             btnSixMonths.checked = false;
                                             termPrice = (btnTwelveMonths.value * monthPrice).toFixed(2);
-                                            document.getElementById("termlength").innerText = (btnTwelveMonths.value * monthPrice).toFixed(2);
+                                            document.getElementById("termlength").innerText = termPrice;
                                         }
 
                                     </script>
@@ -485,84 +484,82 @@
                                 <span class="ps-2 w-50 ">Region :</span> $<span id="region">`
                                     <!-- Mark: regionPrice -->
                                     <script>
-                                        let european_union = document.getElementById("european_unionchecked");
-                                        let asia_singapore = document.getElementById("asia_singaporechecked");
-                                        let asia_cambodia = document.getElementById("asia_cambodiachecked");
-                                        let asia_japan = document.getElementById("asia_japanchecked");
-                                        let asia_india = document.getElementById("asia_indiachecked");
-                                        let australia_sydney = document.getElementById("australia_sydneychecked");
+                                        let btnEuropean = document.getElementById("european_region");
+                                        let btnSingapore = document.getElementById("singapore_region");
+                                        let btnCambodia = document.getElementById("cambodia_region");
+                                        let btnJapan = document.getElementById("japan_region");
+                                        let btnIndia = document.getElementById("checkIndia");
+                                        let btnAustralia = document.getElementById("australia_region");
                                         let regionPrice = 0.0;
-                                        check_european_union();
+                                        checkEuropean();
 
-                                        european_union.addEventListener("click", check_european_union);
-                                        australia_sydney.addEventListener("click", check_australia_sydney);
-                                        asia_india.addEventListener("click", check_asia_india);
-                                        asia_japan.addEventListener("click", check_asia_japan);
-                                        asia_cambodia.addEventListener("click", check_asia_cambodia);
-                                        asia_singapore.addEventListener("click", check_asia_singapore);
+                                        btnEuropean.addEventListener("click", checkEuropean);
+                                        btnAustralia.addEventListener("click", checkAustralia);
+                                        btnIndia.addEventListener("click", checkIndia);
+                                        btnJapan.addEventListener("click", checkJapan);
+                                        btnCambodia.addEventListener("click", checkCambodia);
+                                        btnSingapore.addEventListener("click", check_asia_singapore);
 
-                                        function check_european_union() {
-                                            asia_singapore.checked = false;
-                                            asia_cambodia.checked = false;
-                                            asia_japan.checked = false;
-                                            asia_india.checked = false;
-                                            australia_sydney.checked = false;
-                                            regionPrice = european_union.value;
-                                            document.getElementById("region").innerText = european_union.value;
+                                        function checkEuropean() {
+                                            btnSingapore.checked = false;
+                                            btnCambodia.checked = false;
+                                            btnJapan.checked = false;
+                                            btnIndia.checked = false;
+                                            btnAustralia.checked = false;
+                                            regionPrice = btnEuropean.value;
+                                            document.getElementById("region").innerText = regionPrice;
                                         }
 
-
-                                        function check_asia_singapore() {
-                                            european_union.checked = false;
-                                            asia_cambodia.checked = false;
-                                            asia_japan.checked = false;
-                                            asia_india.checked = false;
-                                            australia_sydney.checked = false;
-                                            document.getElementById("region").innerText = asia_singapore.value;
-                                            regionPrice = asia_singapore.value;
+                                        function checkSingapore() {
+                                            btnEuropean.checked = false;
+                                            btnCambodia.checked = false;
+                                            btnJapan.checked = false;
+                                            btnIndia.checked = false;
+                                            btnAustralia.checked = false;
+                                            regionPrice = btnSingapore.value;
+                                            document.getElementById("region").innerText = regionPrice;
                                         }
 
-                                        function check_asia_cambodia() {
-                                            european_union.checked = false;
-                                            asia_singapore.checked = false;
-                                            asia_japan.checked = false;
-                                            asia_india.checked = false;
-                                            australia_sydney.checked = false;
-                                            regionPrice = asia_cambodia.value;
-                                            document.getElementById("region").innerText = asia_cambodia.value;
+                                        function checkCambodia() {
+                                            btnEuropean.checked = false;
+                                            btnSingapore.checked = false;
+                                            btnJapan.checked = false;
+                                            btnIndia.checked = false;
+                                            btnAustralia.checked = false;
+                                            regionPrice = btnCambodia.value;
+                                            document.getElementById("region").innerText = regionPrice;
                                         }
 
-
-                                        function check_asia_japan() {
-                                            european_union.checked = false;
-                                            asia_singapore.checked = false;
-                                            asia_cambodia.checked = false;
-                                            asia_india.checked = false;
-                                            australia_sydney.checked = false;
+                                        function checkJapan() {
+                                            btnEuropean.checked = false;
+                                            btnSingapore.checked = false;
+                                            btnCambodia.checked = false;
+                                            btnIndia.checked = false;
+                                            btnAustralia.checked = false;
                                             regionPrice = asia_japan.value;
-                                            document.getElementById("region").innerText = asia_japan.value;
+                                            document.getElementById("region").innerText = regionPrice;
                                         }
 
 
-                                        function check_asia_india() {
-                                            european_union.checked = false;
-                                            asia_singapore.checked = false;
-                                            asia_cambodia.checked = false;
-                                            asia_japan.checked = false;
-                                            australia_sydney.checked = false;
-                                            regionPrice = asia_india.value;
-                                            document.getElementById("region").innerText = asia_india.value;
+                                        function checkIndia() {
+                                            btnEuropean.checked = false;
+                                            btnSingapore.checked = false;
+                                            btnCambodia.checked = false;
+                                            btnJapan.checked = false;
+                                            btnAustralia.checked = false;
+                                            regionPrice = btnIndia.value;
+                                            document.getElementById("region").innerText = regionPrice;
                                         }
 
 
-                                        function check_australia_sydney() {
-                                            european_union.checked = false;
-                                            asia_singapore.checked = false;
-                                            asia_cambodia.checked = false;
-                                            asia_japan.checked = false;
-                                            asia_india.checked = false;
-                                            regionPrice = australia_sydney.value;
-                                            document.getElementById("region").innerText = australia_sydney.value;
+                                        function checkAustralia() {
+                                            btnEuropean.checked = false;
+                                            btnSingapore.checked = false;
+                                            btnCambodia.checked = false;
+                                            btnJapan.checked = false;
+                                            btnIndia.checked = false;
+                                            regionPrice = btnSingapore.value;
+                                            document.getElementById("region").innerText = regionPrice;
                                         }
 
                                     </script>
@@ -588,22 +585,21 @@
                                             nvme.checked = false;
                                             ssd600.checked = false;
                                             storagePrice = ssd.value;
-                                            document.getElementById("storage").innerText = ssd.value;
-
+                                            document.getElementById("storage").innerText = storagePrice;
                                         }
 
                                         function check_nvme() {
                                             ssd.checked = false;
                                             ssd600.checked = false;
                                             storagePrice = nvme.value;
-                                            document.getElementById("storage").innerText = nvme.value;
+                                            document.getElementById("storage").innerText = storagePrice;
                                         }
 
                                         function check_ssd600() {
                                             ssd.checked = false;
                                             nvme.checked = false;
                                             storagePrice = ssd600.value;
-                                            document.getElementById("storage").innerText = ssd600.value;
+                                            document.getElementById("storage").innerText = storagePrice;
                                         }
 
                                     </script>
@@ -634,7 +630,7 @@
                                             docker.checked = false;
                                             plesk.checked = false;
                                             imagePrice = ubuntu.value;
-                                            document.getElementById("image").innerText = ubuntu.value;
+                                            document.getElementById("image").innerText = imagePrice;
                                         }
 
                                         function check_window() {
@@ -643,7 +639,7 @@
                                             docker.checked = false;
                                             plesk.checked = false;
                                             imagePrice = windows.value;
-                                            document.getElementById("image").innerText = windows.value;
+                                            document.getElementById("image").innerText = imagePrice;
                                         }
 
                                         function check_cpanel() {
@@ -652,7 +648,7 @@
                                             docker.checked = false;
                                             plesk.checked = false;
                                             imagePrice = cpanel.value;
-                                            document.getElementById("image").innerText = cpanel.value;
+                                            document.getElementById("image").innerText = imagePrice;
                                         }
 
                                         function check_docker() {
@@ -661,7 +657,7 @@
                                             cpanel.checked = false;
                                             plesk.checked = false;
                                             imagePrice = docker.value;
-                                            document.getElementById("image").innerText = docker.value;
+                                            document.getElementById("image").innerText = imagePrice;
                                         }
 
                                         function check_plesk() {
@@ -670,7 +666,7 @@
                                             cpanel.checked = false;
                                             docker.checked = false;
                                             imagePrice = plesk.value;
-                                            document.getElementById("image").innerText = plesk.value;
+                                            document.getElementById("image").innerText = imagePrice;
                                         }
                                     </script>
                                 </span>
@@ -695,21 +691,21 @@
                                             ipssl.checked = false;
                                             ipsslwildcard.checked = false;
                                             networkingPrice = ipaddress.value;
-                                            document.getElementById("network").innerText = ipaddress.value;
+                                            document.getElementById("network").innerText = networkingPrice;
                                         }
 
                                         function check_ipssl() {
                                             ipaddress.checked = false;
                                             ipsslwildcard.checked = false;
                                             networkingPrice = ipssl.value;
-                                            document.getElementById("network").innerText = ipssl.value;
+                                            document.getElementById("network").innerText = networkingPrice;
                                         }
 
                                         function check_ipsslwildcard() {
                                             ipaddress.checked = false;
                                             ipssl.checked = false;
                                             networkingPrice = ipsslwildcard.value;
-                                            document.getElementById("network").innerText = ipsslwildcard.value;
+                                            document.getElementById("network").innerText = networkingPrice;
                                         }
                                     </script>
                                 </span>
