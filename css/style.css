@@ -426,6 +426,45 @@ h6,
     margin-right: 15px;
 }
 
+
+        .login-section {
+            min-height: 100vh;
+        }
+
+        .form-control {
+            border-radius: 0.5rem;
+        }
+
+        .btn-primary {
+            border-radius: 0.5rem;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .divider:not(:empty)::before {
+            margin-right: .5em;
+        }
+
+        .divider:not(:empty)::after {
+            margin-left: .5em;
+        }
+
+        .illustration-img {
+            max-width: 100%;
+            height: auto;
+        }
+
 .chat-image {
   position: fixed;
   bottom: 60px;
@@ -460,4 +499,8 @@ h6,
 
 .chat-image:hover img {
   transform: rotate(360deg);
+}
+
+.login-page {
+    background-color: white;
 }
