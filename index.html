@@ -232,7 +232,6 @@
 
 
         <!-- Pricing Start -->
-        <!-- Pricing Start -->
         <div class="container-xxl py-5">
             <div class="container px-lg-5">
                 <div class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp"
@@ -677,7 +676,25 @@
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <div class="chat-image" onclick="togglePopup()">
+            <img src="./img/image.png" width="50" alt="Chat Icon">
+        </div>
+        <div id="popup-chat" class="popup-chat">
+            <img src="./img/QR.png" width="100%" alt="QR Code">
+                    <br>
+        Our Telegram
+        </div>
+
     </div>
+    </div>
+    <script>
+
+        function togglePopup() {
+            const popup = document.getElementById('popup-chat');
+            popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+        }
+
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
