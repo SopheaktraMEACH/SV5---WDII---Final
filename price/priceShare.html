@@ -442,272 +442,35 @@
                             <!-- Term length -->
                             <div class="p-2 border-bottom d-flex fw-semi-bold">
                                 <span class="ps-2 w-50 ">Term Length :</span> $<span id="termlength">
-                                    <!-- Mark: termPrice -->
-                                    <script>
-                                        const monthPrice = 1.10;
-                                        let termPrice = 0.00;
-                                        let btnThreeMonths = document.getElementById("three_month");
-                                        let btnSixMonths = document.getElementById("six_month");
-                                        let btnTwelveMonths = document.getElementById("twelve_month");
-                                        check_twelve_months();
-
-                                        btnTwelveMonths.addEventListener("click", check_twelve_months);
-                                        btnSixMonths.addEventListener("click", check_six_months);
-                                        btnThreeMonths.addEventListener("click", check_three_months);
-
-                                        function check_three_months() {
-                                            btnSixMonths.checked = false;
-                                            btnTwelveMonths.checked = false;
-                                            termPrice = (btnThreeMonths.value * monthPrice).toFixed(2);
-                                            document.getElementById("termlength").innerText = termPrice;
-                                        }
-
-                                        function check_six_months() {
-                                            btnThreeMonths.checked = false;
-                                            btnTwelveMonths.checked = false;
-                                            termPrice = (btnSixMonths.value * monthPrice).toFixed(2);
-                                            document.getElementById("termlength").innerText = termPrice;
-                                        }
-
-                                        function check_twelve_months() {
-                                            btnThreeMonths.checked = false;
-                                            btnSixMonths.checked = false;
-                                            termPrice = (btnTwelveMonths.value * monthPrice).toFixed(2);
-                                            document.getElementById("termlength").innerText = termPrice;
-                                        }
-
-                                    </script>
+                                     <!-- Months Calculation Function -->
                                 </span>
                             </div>
 
                             <div class="p-2 border-bottom d-flex fw-semi-bold">
                                 <span class="ps-2 w-50 ">Region :</span> $<span id="region">`
-                                    <!-- Mark: regionPrice -->
-                                    <script>
-                                        let btnEuropean = document.getElementById("european_region");
-                                        let btnSingapore = document.getElementById("singapore_region");
-                                        let btnCambodia = document.getElementById("cambodia_region");
-                                        let btnJapan = document.getElementById("japan_region");
-                                        let btnIndia = document.getElementById("checkIndia");
-                                        let btnAustralia = document.getElementById("australia_region");
-                                        let regionPrice = 0.0;
-                                        checkEuropean();
+                                    <!-- Region Calculation Function -->
 
-                                        btnEuropean.addEventListener("click", checkEuropean);
-                                        btnAustralia.addEventListener("click", checkAustralia);
-                                        btnIndia.addEventListener("click", checkIndia);
-                                        btnJapan.addEventListener("click", checkJapan);
-                                        btnCambodia.addEventListener("click", checkCambodia);
-                                        btnSingapore.addEventListener("click", check_asia_singapore);
-
-                                        function checkEuropean() {
-                                            btnSingapore.checked = false;
-                                            btnCambodia.checked = false;
-                                            btnJapan.checked = false;
-                                            btnIndia.checked = false;
-                                            btnAustralia.checked = false;
-                                            regionPrice = btnEuropean.value;
-                                            document.getElementById("region").innerText = regionPrice;
-                                        }
-
-                                        function checkSingapore() {
-                                            btnEuropean.checked = false;
-                                            btnCambodia.checked = false;
-                                            btnJapan.checked = false;
-                                            btnIndia.checked = false;
-                                            btnAustralia.checked = false;
-                                            regionPrice = btnSingapore.value;
-                                            document.getElementById("region").innerText = regionPrice;
-                                        }
-
-                                        function checkCambodia() {
-                                            btnEuropean.checked = false;
-                                            btnSingapore.checked = false;
-                                            btnJapan.checked = false;
-                                            btnIndia.checked = false;
-                                            btnAustralia.checked = false;
-                                            regionPrice = btnCambodia.value;
-                                            document.getElementById("region").innerText = regionPrice;
-                                        }
-
-                                        function checkJapan() {
-                                            btnEuropean.checked = false;
-                                            btnSingapore.checked = false;
-                                            btnCambodia.checked = false;
-                                            btnIndia.checked = false;
-                                            btnAustralia.checked = false;
-                                            regionPrice = asia_japan.value;
-                                            document.getElementById("region").innerText = regionPrice;
-                                        }
-
-
-                                        function checkIndia() {
-                                            btnEuropean.checked = false;
-                                            btnSingapore.checked = false;
-                                            btnCambodia.checked = false;
-                                            btnJapan.checked = false;
-                                            btnAustralia.checked = false;
-                                            regionPrice = btnIndia.value;
-                                            document.getElementById("region").innerText = regionPrice;
-                                        }
-
-
-                                        function checkAustralia() {
-                                            btnEuropean.checked = false;
-                                            btnSingapore.checked = false;
-                                            btnCambodia.checked = false;
-                                            btnJapan.checked = false;
-                                            btnIndia.checked = false;
-                                            regionPrice = btnSingapore.value;
-                                            document.getElementById("region").innerText = regionPrice;
-                                        }
-
-                                    </script>
                                 </span>
                             </div>
                             <div class="p-2 border-bottom d-flex fw-semi-bold">
                                 <span class="ps-2 w-50 ">Storage :</span>
                                 $
                                 <span id="storage">
-                                    <!-- Mark: storagePrice -->
-                                    <script>
-                                        let ssd = document.getElementById("ssdchecked");
-                                        let nvme = document.getElementById("nvmechecked");
-                                        let ssd600 = document.getElementById("ssd600checked");
-                                        let storagePrice = 0.00
-                                        check_ssd();
+                                    <!-- Storage Calculation Function -->
 
-                                        ssd.addEventListener("click", check_ssd);
-                                        ssd600.addEventListener("click", check_ssd600);
-                                        nvme.addEventListener("click", check_nvme);
-
-                                        function check_ssd() {
-                                            nvme.checked = false;
-                                            ssd600.checked = false;
-                                            storagePrice = ssd.value;
-                                            document.getElementById("storage").innerText = storagePrice;
-                                        }
-
-                                        function check_nvme() {
-                                            ssd.checked = false;
-                                            ssd600.checked = false;
-                                            storagePrice = nvme.value;
-                                            document.getElementById("storage").innerText = storagePrice;
-                                        }
-
-                                        function check_ssd600() {
-                                            ssd.checked = false;
-                                            nvme.checked = false;
-                                            storagePrice = ssd600.value;
-                                            document.getElementById("storage").innerText = storagePrice;
-                                        }
-
-                                    </script>
                                 </span>
                             </div>
                             <div class="p-2 border-bottom d-flex fw-semi-bold">
-                                <span class="ps-2 w-50 ">Image :</span>
-                                $
+                                <span class="ps-2 w-50 ">Image :</span> $
                                 <span id="image">
-                                    <script>
-                                        let ubuntu = document.getElementById("ubuntuchecked");
-                                        let windows = document.getElementById("windows-server-2022checked");
-                                        let cpanel = document.getElementById("cpanelchecked");
-                                        let docker = document.getElementById("dockerchecked");
-                                        let plesk = document.getElementById("pleskchecked");
-                                        let imagePrice = 0.00;
-                                        check_ubuntu();
-
-                                        plesk.addEventListener("click", check_plesk);
-                                        docker.addEventListener("click", check_docker);
-                                        ubuntu.addEventListener("click", check_ubuntu);
-                                        windows.addEventListener("click", check_window);
-                                        cpanel.addEventListener("click", check_cpanel);
-
-                                        function check_ubuntu() {
-                                            windows.checked = false;
-                                            cpanel.checked = false;
-                                            docker.checked = false;
-                                            plesk.checked = false;
-                                            imagePrice = ubuntu.value;
-                                            document.getElementById("image").innerText = imagePrice;
-                                        }
-
-                                        function check_window() {
-                                            ubuntu.checked = false;
-                                            cpanel.checked = false;
-                                            docker.checked = false;
-                                            plesk.checked = false;
-                                            imagePrice = windows.value;
-                                            document.getElementById("image").innerText = imagePrice;
-                                        }
-
-                                        function check_cpanel() {
-                                            ubuntu.checked = false;
-                                            windows.checked = false;
-                                            docker.checked = false;
-                                            plesk.checked = false;
-                                            imagePrice = cpanel.value;
-                                            document.getElementById("image").innerText = imagePrice;
-                                        }
-
-                                        function check_docker() {
-                                            ubuntu.checked = false;
-                                            windows.checked = false;
-                                            cpanel.checked = false;
-                                            plesk.checked = false;
-                                            imagePrice = docker.value;
-                                            document.getElementById("image").innerText = imagePrice;
-                                        }
-
-                                        function check_plesk() {
-                                            ubuntu.checked = false;
-                                            windows.checked = false;
-                                            cpanel.checked = false;
-                                            docker.checked = false;
-                                            imagePrice = plesk.value;
-                                            document.getElementById("image").innerText = imagePrice;
-                                        }
-                                    </script>
+                                    <!-- Image Calculation Function -->
                                 </span>
                             </div>
 
                             <div class="p-2 border-bottom d-flex fw-semi-bold">
                                 <span class="ps-2 w-50 ">Networking :</span> $
                                 <span id="network">
-                                    <!-- Mark: networkingPrice -->
-                                    <script>
-                                        let ipaddress = document.getElementById("ipaddresschecked");
-                                        let ipssl = document.getElementById("ipsslchecked");
-                                        let ipsslwildcard = document.getElementById("ipsslwildcardchecked");
-                                        let networkingPrice = 0.00;
-                                        check_ipaddress();
-
-                                        ipaddress.addEventListener("click", check_ipaddress);
-                                        ipssl.addEventListener("click", check_ipssl);
-                                        ipsslwildcard.addEventListener("click", check_ipsslwildcard);
-
-                                        function check_ipaddress() {
-                                            ipssl.checked = false;
-                                            ipsslwildcard.checked = false;
-                                            networkingPrice = ipaddress.value;
-                                            document.getElementById("network").innerText = networkingPrice;
-                                        }
-
-                                        function check_ipssl() {
-                                            ipaddress.checked = false;
-                                            ipsslwildcard.checked = false;
-                                            networkingPrice = ipssl.value;
-                                            document.getElementById("network").innerText = networkingPrice;
-                                        }
-
-                                        function check_ipsslwildcard() {
-                                            ipaddress.checked = false;
-                                            ipssl.checked = false;
-                                            networkingPrice = ipsslwildcard.value;
-                                            document.getElementById("network").innerText = networkingPrice;
-                                        }
-                                    </script>
+                                    <!-- Networking Calculation Function -->
                                 </span>
                             </div>
                             <!-- js -->
@@ -738,13 +501,247 @@
         </div>
 
         <!-- Footer -->
-        <!-- Mark:  -->
         <script>
+            /* Months Calculation Function */
+            const monthPrice = 1.10;
+            let termPrice = 0.00;
+            let btnThreeMonths = document.getElementById("three_month");
+            let btnSixMonths = document.getElementById("six_month");
+            let btnTwelveMonths = document.getElementById("twelve_month");
+
+            btnTwelveMonths.addEventListener("click", check_twelve_months);
+            btnSixMonths.addEventListener("click", check_six_months);
+            btnThreeMonths.addEventListener("click", check_three_months);
+            check_twelve_months();
+
+            function check_three_months() {
+                btnSixMonths.checked = false;
+                btnTwelveMonths.checked = false;
+                termPrice = (btnThreeMonths.value * monthPrice).toFixed(2);
+                document.getElementById("termlength").innerText = termPrice;
+            }
+
+            function check_six_months() {
+                btnThreeMonths.checked = false;
+                btnTwelveMonths.checked = false;
+                termPrice = (btnSixMonths.value * monthPrice).toFixed(2);
+                document.getElementById("termlength").innerText = termPrice;
+            }
+
+            function check_twelve_months() {
+                btnThreeMonths.checked = false;
+                btnSixMonths.checked = false;
+                termPrice = (btnTwelveMonths.value * monthPrice).toFixed(2);
+                document.getElementById("termlength").innerText = termPrice;
+            }
+
+            /* Region Calculation Function */
+            let btnEuropean = document.getElementById("european_region");
+            let btnSingapore = document.getElementById("singapore_region");
+            let btnCambodia = document.getElementById("cambodia_region");
+            let btnJapan = document.getElementById("japan_region");
+            let btnIndia = document.getElementById("checkIndia");
+            let btnAustralia = document.getElementById("australia_region");
+            let regionPrice = 0.0;
+
+            btnEuropean.addEventListener("click", checkEuropean);
+            btnAustralia.addEventListener("click", checkAustralia);
+            btnIndia.addEventListener("click", checkIndia);
+            btnJapan.addEventListener("click", checkJapan);
+            btnCambodia.addEventListener("click", checkCambodia);
+            btnSingapore.addEventListener("click", checkSingapore);
+            checkEuropean();
+
+            function checkEuropean() {
+                btnSingapore.checked = false;
+                btnCambodia.checked = false;
+                btnJapan.checked = false;
+                btnIndia.checked = false;
+                btnAustralia.checked = false;
+                regionPrice = btnEuropean.value;
+                document.getElementById("region").innerText = regionPrice;
+            }
+
+            function checkSingapore() {
+                btnEuropean.checked = false;
+                btnCambodia.checked = false;
+                btnJapan.checked = false;
+                btnIndia.checked = false;
+                btnAustralia.checked = false;
+                regionPrice = btnSingapore.value;
+                document.getElementById("region").innerText = regionPrice;
+            }
+
+            function checkCambodia() {
+                btnEuropean.checked = false;
+                btnSingapore.checked = false;
+                btnJapan.checked = false;
+                btnIndia.checked = false;
+                btnAustralia.checked = false;
+                regionPrice = btnCambodia.value;
+                document.getElementById("region").innerText = regionPrice;
+            }
+
+            function checkJapan() {
+                btnEuropean.checked = false;
+                btnSingapore.checked = false;
+                btnCambodia.checked = false;
+                btnIndia.checked = false;
+                btnAustralia.checked = false;
+                regionPrice = asia_japan.value;
+                document.getElementById("region").innerText = regionPrice;
+            }
+
+            function checkIndia() {
+                btnEuropean.checked = false;
+                btnSingapore.checked = false;
+                btnCambodia.checked = false;
+                btnJapan.checked = false;
+                btnAustralia.checked = false;
+                regionPrice = btnIndia.value;
+                document.getElementById("region").innerText = regionPrice;
+            }
+
+            function checkAustralia() {
+                btnEuropean.checked = false;
+                btnSingapore.checked = false;
+                btnCambodia.checked = false;
+                btnJapan.checked = false;
+                btnIndia.checked = false;
+                regionPrice = btnSingapore.value;
+                document.getElementById("region").innerText = regionPrice;
+            }
+
+            /* Storage Calculation Function */
+            let ssd = document.getElementById("ssdchecked");
+            let nvme = document.getElementById("nvmechecked");
+            let ssd600 = document.getElementById("ssd600checked");
+            let storagePrice = 0.00
+
+            ssd.addEventListener("click", check_ssd);
+            ssd600.addEventListener("click", check_ssd600);
+            nvme.addEventListener("click", check_nvme);
+            check_ssd();
+
+            function check_ssd() {
+                nvme.checked = false;
+                ssd600.checked = false;
+                storagePrice = ssd.value;
+                document.getElementById("storage").innerText = storagePrice;
+            }
+
+            function check_nvme() {
+                ssd.checked = false;
+                ssd600.checked = false;
+                storagePrice = nvme.value;
+                document.getElementById("storage").innerText = storagePrice;
+            }
+
+            function check_ssd600() {
+                ssd.checked = false;
+                nvme.checked = false;
+                storagePrice = ssd600.value;
+                document.getElementById("storage").innerText = storagePrice;
+            }
+
+            /* Image Calculation Function */
+            let ubuntu = document.getElementById("ubuntuchecked");
+            let windows = document.getElementById("windows-server-2022checked");
+            let cpanel = document.getElementById("cpanelchecked");
+            let docker = document.getElementById("dockerchecked");
+            let plesk = document.getElementById("pleskchecked");
+            let imagePrice = 0.00;
+
+            plesk.addEventListener("click", check_plesk);
+            docker.addEventListener("click", check_docker);
+            ubuntu.addEventListener("click", check_ubuntu);
+            windows.addEventListener("click", check_window);
+            cpanel.addEventListener("click", check_cpanel);
+            check_ubuntu();
+
+            function check_ubuntu() {
+                windows.checked = false;
+                cpanel.checked = false;
+                docker.checked = false;
+                plesk.checked = false;
+                imagePrice = ubuntu.value;
+                document.getElementById("image").innerText = imagePrice;
+            }
+
+            function check_window() {
+                ubuntu.checked = false;
+                cpanel.checked = false;
+                docker.checked = false;
+                plesk.checked = false;
+                imagePrice = windows.value;
+                document.getElementById("image").innerText = imagePrice;
+            }
+
+            function check_cpanel() {
+                ubuntu.checked = false;
+                windows.checked = false;
+                docker.checked = false;
+                plesk.checked = false;
+                imagePrice = cpanel.value;
+                document.getElementById("image").innerText = imagePrice;
+            }
+
+            function check_docker() {
+                ubuntu.checked = false;
+                windows.checked = false;
+                cpanel.checked = false;
+                plesk.checked = false;
+                imagePrice = docker.value;
+                document.getElementById("image").innerText = imagePrice;
+            }
+
+            function check_plesk() {
+                ubuntu.checked = false;
+                windows.checked = false;
+                cpanel.checked = false;
+                docker.checked = false;
+                imagePrice = plesk.value;
+                document.getElementById("image").innerText = imagePrice;
+            }
+
+            /* Netwroking Calculation Function */
+            let ipaddress = document.getElementById("ipaddresschecked");
+            let ipssl = document.getElementById("ipsslchecked");
+            let ipsslwildcard = document.getElementById("ipsslwildcardchecked");
+            let networkingPrice = 0.00;
+
+            ipaddress.addEventListener("click", check_ipaddress);
+            ipssl.addEventListener("click", check_ipssl);
+            ipsslwildcard.addEventListener("click", check_ipsslwildcard);
+            check_ipaddress();
+
+            function check_ipaddress() {
+                ipssl.checked = false;
+                ipsslwildcard.checked = false;
+                networkingPrice = ipaddress.value;
+                document.getElementById("network").innerText = networkingPrice;
+            }
+
+            function check_ipssl() {
+                ipaddress.checked = false;
+                ipsslwildcard.checked = false;
+                networkingPrice = ipssl.value;
+                document.getElementById("network").innerText = networkingPrice;
+            }
+
+            function check_ipsslwildcard() {
+                ipaddress.checked = false;
+                ipssl.checked = false;
+                networkingPrice = ipsslwildcard.value;
+                document.getElementById("network").innerText = networkingPrice;
+            }
+
+            /* Total Calculation Function */
             let calculateButton = document.getElementById("calculateButton");
             let finalResult = document.getElementById("EndResult");
-            calculateButton.addEventListener("click", calculate);
+            calculateButton.addEventListener("click", calculateTotal);
 
-            function calculate() {
+            function calculateTotal() {
                 let totalPrice = 0.00;
 
                 // Calculate total price
