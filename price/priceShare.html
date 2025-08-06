@@ -492,109 +492,85 @@
                                         let asia_india = document.getElementById("asia_indiachecked");
                                         let australia_sydney = document.getElementById("australia_sydneychecked");
                                         let regionPrice = 0.0;
-
                                         check_european_union();
 
-                                        function check_european_union() {
-                                            if (european_union.checked) {
-                                                asia_singapore.checked = false;
-                                                asia_cambodia.checked = false;
-                                                asia_japan.checked = false;
-                                                asia_india.checked = false;
-                                                australia_sydney.checked = false;
-                                                regionPrice = european_union.value;
-                                                document.getElementById("region").innerText = european_union.value;
-                                            } else {
-                                                document.getElementById("region").innerText = "0.00";
-                                            }
-                                        }
                                         european_union.addEventListener("click", check_european_union);
+                                        australia_sydney.addEventListener("click", check_australia_sydney);
+                                        asia_india.addEventListener("click", check_asia_india);
+                                        asia_japan.addEventListener("click", check_asia_japan);
+                                        asia_cambodia.addEventListener("click", check_asia_cambodia);
+                                        asia_singapore.addEventListener("click", check_asia_singapore);
+
+                                        function check_european_union() {
+                                            asia_singapore.checked = false;
+                                            asia_cambodia.checked = false;
+                                            asia_japan.checked = false;
+                                            asia_india.checked = false;
+                                            australia_sydney.checked = false;
+                                            regionPrice = european_union.value;
+                                            document.getElementById("region").innerText = european_union.value;
+                                        }
 
 
                                         function check_asia_singapore() {
-                                            if (asia_singapore.checked) {
-                                                european_union.checked = false;
-                                                asia_cambodia.checked = false;
-                                                asia_japan.checked = false;
-                                                asia_india.checked = false;
-                                                australia_sydney.checked = false;
-                                                document.getElementById("region").innerText = asia_singapore.value;
-                                                regionPrice = asia_singapore.value;
-                                            } else {
-                                                document.getElementById("region").innerText = "0.00";
-                                            }
+                                            european_union.checked = false;
+                                            asia_cambodia.checked = false;
+                                            asia_japan.checked = false;
+                                            asia_india.checked = false;
+                                            australia_sydney.checked = false;
+                                            document.getElementById("region").innerText = asia_singapore.value;
+                                            regionPrice = asia_singapore.value;
                                         }
-                                        asia_singapore.addEventListener("click", check_asia_singapore);
 
                                         function check_asia_cambodia() {
-                                            if (asia_cambodia.checked) {
-                                                european_union.checked = false;
-                                                asia_singapore.checked = false;
-                                                asia_japan.checked = false;
-                                                asia_india.checked = false;
-                                                australia_sydney.checked = false;
-                                                regionPrice = asia_cambodia.value;
-                                                document.getElementById("region").innerText = asia_cambodia.value;
-                                            } else {
-                                                document.getElementById("region").innerText = "0.00";
-                                            }
+                                            european_union.checked = false;
+                                            asia_singapore.checked = false;
+                                            asia_japan.checked = false;
+                                            asia_india.checked = false;
+                                            australia_sydney.checked = false;
+                                            regionPrice = asia_cambodia.value;
+                                            document.getElementById("region").innerText = asia_cambodia.value;
                                         }
-                                        asia_cambodia.addEventListener("click", check_asia_cambodia);
+
 
                                         function check_asia_japan() {
-                                            if (asia_japan.checked) {
-                                                european_union.checked = false;
-                                                asia_singapore.checked = false;
-                                                asia_cambodia.checked = false;
-                                                asia_india.checked = false;
-                                                australia_sydney.checked = false;
-                                                regionPrice = asia_japan.value;
-
-                                                document.getElementById("region").innerText = asia_japan.value;
-                                            } else {
-                                                document.getElementById("region").innerText = "0.00";
-                                            }
+                                            european_union.checked = false;
+                                            asia_singapore.checked = false;
+                                            asia_cambodia.checked = false;
+                                            asia_india.checked = false;
+                                            australia_sydney.checked = false;
+                                            regionPrice = asia_japan.value;
+                                            document.getElementById("region").innerText = asia_japan.value;
                                         }
-                                        asia_japan.addEventListener("click", check_asia_japan);
 
 
                                         function check_asia_india() {
-                                            if (asia_india.checked) {
-                                                european_union.checked = false;
-                                                asia_singapore.checked = false;
-                                                asia_cambodia.checked = false;
-                                                asia_japan.checked = false;
-                                                australia_sydney.checked = false;
-                                                regionPrice = asia_india.value;
-                                                document.getElementById("region").innerText = asia_india.value;
-                                            } else {
-                                                document.getElementById("region").innerText = "0.00";
-                                            }
+                                            european_union.checked = false;
+                                            asia_singapore.checked = false;
+                                            asia_cambodia.checked = false;
+                                            asia_japan.checked = false;
+                                            australia_sydney.checked = false;
+                                            regionPrice = asia_india.value;
+                                            document.getElementById("region").innerText = asia_india.value;
                                         }
-                                        asia_india.addEventListener("click", check_asia_india);
 
 
                                         function check_australia_sydney() {
-                                            if (australia_sydney.checked) {
-                                                european_union.checked = false;
-                                                asia_singapore.checked = false;
-                                                asia_cambodia.checked = false;
-                                                asia_japan.checked = false;
-                                                asia_india.checked = false;
-                                                regionPrice = australia_sydney.value;
-                                                document.getElementById("region").innerText = australia_sydney.value;
-                                            } else {
-                                                document.getElementById("region").innerText = "0.00";
-                                            }
+                                            european_union.checked = false;
+                                            asia_singapore.checked = false;
+                                            asia_cambodia.checked = false;
+                                            asia_japan.checked = false;
+                                            asia_india.checked = false;
+                                            regionPrice = australia_sydney.value;
+                                            document.getElementById("region").innerText = australia_sydney.value;
                                         }
-                                        australia_sydney.addEventListener("click", check_australia_sydney);
 
                                     </script>
                                 </span>
                             </div>
                             <div class="p-2 border-bottom d-flex fw-semi-bold">
                                 <span class="ps-2 w-50 ">Storage :</span>
-                                    $
+                                $
                                 <span id="storage">
                                     <!-- Mark: storagePrice -->
                                     <script>
@@ -604,134 +580,99 @@
                                         let storagePrice = 0.00
                                         check_ssd();
 
-                                        function check_ssd() {
-                                            if (ssd.checked) {
-                                                nvme.checked = false;
-                                                ssd600.checked = false;
-                                                storagePrice = ssd.value;
-                                                document.getElementById("storage").innerText = ssd.value;
-                                            } else {
-                                                document.getElementById("storage").innerText = "0.00";
-                                            }
-                                        }
                                         ssd.addEventListener("click", check_ssd);
-
-
-                                        function check_nvme() {
-                                            if (nvme.checked) {
-                                                ssd.checked = false;
-                                                ssd600.checked = false;
-                                                storagePrice = nvme.value;
-                                                document.getElementById("storage").innerText = nvme.value;
-                                            } else {
-                                                document.getElementById("storage").innerText = "0.00";
-                                            }
-                                        }
+                                        ssd600.addEventListener("click", check_ssd600);
                                         nvme.addEventListener("click", check_nvme);
 
+                                        function check_ssd() {
+                                            nvme.checked = false;
+                                            ssd600.checked = false;
+                                            storagePrice = ssd.value;
+                                            document.getElementById("storage").innerText = ssd.value;
+
+                                        }
+
+                                        function check_nvme() {
+                                            ssd.checked = false;
+                                            ssd600.checked = false;
+                                            storagePrice = nvme.value;
+                                            document.getElementById("storage").innerText = nvme.value;
+                                        }
 
                                         function check_ssd600() {
-                                            if (ssd600.checked) {
-                                                ssd.checked = false;
-                                                nvme.checked = false;
-                                                storagePrice = ssd600.value;
-                                                document.getElementById("storage").innerText = ssd600.value;
-                                            } else {
-                                                document.getElementById("storage").innerText = "0.00";
-                                            }
+                                            ssd.checked = false;
+                                            nvme.checked = false;
+                                            storagePrice = ssd600.value;
+                                            document.getElementById("storage").innerText = ssd600.value;
                                         }
-                                        ssd600.addEventListener("click", check_ssd600);
 
                                     </script>
                                 </span>
                             </div>
                             <div class="p-2 border-bottom d-flex fw-semi-bold">
                                 <span class="ps-2 w-50 ">Image :</span>
-                                    $
+                                $
                                 <span id="image">
-                                <script>
-                                    let ubuntu = document.getElementById("ubuntuchecked");
-                                    let windows = document.getElementById("windows-server-2022checked");
-                                    let cpanel = document.getElementById("cpanelchecked");
-                                    let docker = document.getElementById("dockerchecked");
-                                    let plesk = document.getElementById("pleskchecked");
-                                    let imagePrice = 0.00;
-                                    check_ubuntu();
+                                    <script>
+                                        let ubuntu = document.getElementById("ubuntuchecked");
+                                        let windows = document.getElementById("windows-server-2022checked");
+                                        let cpanel = document.getElementById("cpanelchecked");
+                                        let docker = document.getElementById("dockerchecked");
+                                        let plesk = document.getElementById("pleskchecked");
+                                        let imagePrice = 0.00;
+                                        check_ubuntu();
 
-                                    function check_ubuntu() {
-                                        if (ubuntu.checked) {
+                                        plesk.addEventListener("click", check_plesk);
+                                        docker.addEventListener("click", check_docker);
+                                        ubuntu.addEventListener("click", check_ubuntu);
+                                        windows.addEventListener("click", check_window);
+                                        cpanel.addEventListener("click", check_cpanel);
+
+                                        function check_ubuntu() {
                                             windows.checked = false;
                                             cpanel.checked = false;
                                             docker.checked = false;
                                             plesk.checked = false;
                                             imagePrice = ubuntu.value;
                                             document.getElementById("image").innerText = ubuntu.value;
-                                        } else {
-                                            document.getElementById("image").innerText = "0.00";
                                         }
-                                    }
-                                    ubuntu.addEventListener("click", check_ubuntu);
 
-                                    function check_window() {
-                                        if (windows.checked) {
+                                        function check_window() {
                                             ubuntu.checked = false;
                                             cpanel.checked = false;
                                             docker.checked = false;
                                             plesk.checked = false;
                                             imagePrice = windows.value;
-
                                             document.getElementById("image").innerText = windows.value;
-                                        } else {
-                                            document.getElementById("image").innerText = "0.00";
                                         }
-                                    }
-                                    windows.addEventListener("click", check_window);
 
-                                    function check_cpanel() {
-                                        if (cpanel.checked) {
+                                        function check_cpanel() {
                                             ubuntu.checked = false;
                                             windows.checked = false;
                                             docker.checked = false;
                                             plesk.checked = false;
                                             imagePrice = cpanel.value;
-
                                             document.getElementById("image").innerText = cpanel.value;
-                                        } else {
-                                            document.getElementById("image").innerText = "0.00";
                                         }
-                                    }
-                                    cpanel.addEventListener("click", check_cpanel);
 
-                                    function check_docker() {
-                                        if (docker.checked) {
+                                        function check_docker() {
                                             ubuntu.checked = false;
                                             windows.checked = false;
                                             cpanel.checked = false;
                                             plesk.checked = false;
                                             imagePrice = docker.value;
-
                                             document.getElementById("image").innerText = docker.value;
-                                        } else {
-                                            document.getElementById("image").innerText = "0.00";
                                         }
-                                    }
-                                    docker.addEventListener("click", check_docker);
 
-                                    function check_plesk() {
-                                        if (plesk.checked) {
+                                        function check_plesk() {
                                             ubuntu.checked = false;
                                             windows.checked = false;
                                             cpanel.checked = false;
                                             docker.checked = false;
                                             imagePrice = plesk.value;
-
                                             document.getElementById("image").innerText = plesk.value;
-                                        } else {
-                                            document.getElementById("image").innerText = "0.00";
                                         }
-                                    }
-                                    plesk.addEventListener("click", check_plesk);
-                                </script>
+                                    </script>
                                 </span>
                             </div>
 
@@ -775,12 +716,11 @@
                             </div>
                             <!-- js -->
                             <div class="p-2 border-bottom d-flex fw-semi-bold">
-                                <span class="ps-2 w-50 ">Setup Fee :</span>
-                                    $
-                                <span id="setup">15.00</span>
+                                <span class="ps-2 w-50 ">Setup Fee :</span> $ <span id="setup">15.00</span>
                             </div>
                             <div class="p-2 border-bottom d-flex fw-semi-bold">
-                                <button type="button" class="btn btn-primary text-white btn-sm w-100 fw-semi-bold" id="calculateButton">
+                                <button type="button" class="btn btn-primary text-white btn-sm w-100 fw-semi-bold"
+                                    id="calculateButton">
                                     <i class="bi bi-calculator-fill"></i> Calculate Price
                                 </button>
                             </div>
@@ -789,7 +729,8 @@
                                 <h1 class="mb-3">
                                     <small class="align-top style=" font-size: 22px; line-height: 45px;">$</small>
                                     <span id="EndResult">0.00</span>
-                                    <small class="align-bottom" style="font-size: 16px; line-height: 40px;" id="duration">/ year</small>
+                                    <small class="align-bottom" style="font-size: 16px; line-height: 40px;"
+                                        id="duration">/ year</small>
                                 </h1>
                                 <div class="btn btn-secondary px-4 py-2 b-border-red" id="submit">Continue</div>
                                 <p class="text-danger" id="danger"></p>
